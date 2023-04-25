@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, render_template, redirect, url_for, flash, abort
 from functools import wraps
 from flask_bootstrap import Bootstrap
@@ -9,20 +11,30 @@ from sqlalchemy.orm import relationship
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 from forms import CreatePostForm, CreateRegisterForm, CreateLoginForm, CommentForm
 from flask_gravatar import Gravatar
+import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
 ckeditor = CKEditor(app)
 Bootstrap(app)
 
 # CONNECT TO DB
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 gravatar = Gravatar(app, size=100, rating='g', default='retro', force_default=False, force_lower=False, use_ssl=False,
                     base_url=None)
 login_manager = LoginManager()
 login_manager.init_app(app)
+
+# def form_mail(name, email, phone, message):
+#     email_me = YOUR_MAIL_DI
+#     password_me = YOUR_MAIL_DI_PASSWORD
+#     email_message = f"Subject:New Message\n\nName: {name}\nEmail: {email}\nPhone: {phone}\nMessage:{message}"
+#     with smtplib.SMTP("smtp.gmail.com", 587) as connection:
+#         connection.starttls()
+#         connection.login(email_me, password_me)
+#         connection.sendmail(from_addr=email_me, to_addrs="karthiscar602@gmail.com", msg=email_message)
 
 
 @login_manager.user_loader
