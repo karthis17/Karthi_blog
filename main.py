@@ -1,6 +1,4 @@
-import os
-
-from flask import Flask, render_template, redirect, url_for, flash, abort
+from flask import Flask, render_template, redirect, url_for, flash, abort, request
 from functools import wraps
 from flask_bootstrap import Bootstrap
 from flask_ckeditor import CKEditor
@@ -12,6 +10,7 @@ from flask_login import UserMixin, login_user, LoginManager, login_required, cur
 from forms import CreatePostForm, CreateRegisterForm, CreateLoginForm, CommentForm
 from flask_gravatar import Gravatar
 import os
+import smtplib
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
@@ -26,6 +25,7 @@ gravatar = Gravatar(app, size=100, rating='g', default='retro', force_default=Fa
                     base_url=None)
 login_manager = LoginManager()
 login_manager.init_app(app)
+
 
 # def form_mail(name, email, phone, message):
 #     email_me = YOUR_MAIL_DI
@@ -170,9 +170,29 @@ def about():
     return render_template("about.html", logged_in=current_user.is_authenticated)
 
 
-@app.route("/contact")
+@app.route("/contact", methods=['POST', 'GET'])
 def contact():
+    if request.method == 'POST':
+        if not current_user.is_authenticated:
+            flash("You need to sign in first")
+            return redirect(url_for("login"))
+        user_now = User.query.get(current_user.get_id())
+        email_ = user_now.email
+        email_me = os.environ.get("EMAIL_ID")
+        password_me = os.environ.get("PASSWORD")
+        email_message = f"Subject:New Message\n\nEmail: {email_}\nPhone: {request.form.get('tele')}\nHello, I am {request.form.get('name')}\nMessage:{request.form.get('msg')}"
+        with smtplib.SMTP("smtp.gmail.com", 587) as connection:
+            connection.starttls()
+            connection.login(email_me, password_me)
+            connection.sendmail(from_addr=email_me, to_addrs="karthiscar602@gmail.com", msg=email_message)
+
     return render_template("contact.html", logged_in=current_user.is_authenticated)
+
+
+# @app.route("/sendmail", methods=['POST'])
+# @login_required
+# def sendmail():
+#     request.form.get("name")
 
 
 @app.route("/new-post", methods=["POST", "GET"])
