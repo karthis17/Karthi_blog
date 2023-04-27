@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e9e2327-24bb-4f40-9b41-1fae50b27b9f" name="Changes" comment="" />
+    <list default="true" id="2e9e2327-24bb-4f40-9b41-1fae50b27b9f" name="Changes" comment="upgrade sql_lite to postgresql and set contact.html">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,16 +37,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/PYthon/flask_app/blog-with-user&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TODO_SCOPE": "All Places",
+    "full.screen.before.presentation.mode": "false",
+    "last_opened_file_path": "D:/PYthon/flask_app/blog-with-user/main.py",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\PYthon\flask_app\blog-with-user\static\img" />
@@ -53,6 +55,34 @@
       <recent name="D:\PYthon\flask_app\blog-with-user\static\js" />
       <recent name="D:\PYthon\flask_app\blog-with-user\static\css" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python">
+      <module name="blog-with-user" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="DATABASE_URL" value="postgresql://admin:htmH2VfF2UD7fEdDpItyv5tmRougniRQ@dpg-ch40h7seooglumagtc4g-a.oregon-postgres.render.com/blog_ftc6" />
+        <env name="EMAIL_ID" value="recoverid166@gmail.com" />
+        <env name="PASSWORD" value="flecfrqopettfcjl" />
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="SECRET_KEY" value="htmH2VfF2UD7fEdDpItyv5tmRougniRQ" />
+      </envs>
+      <option name="SDK_HOME" value="D:\PYthon\flask_app\blog-with-user\venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.10 (blog-with-user)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -112,7 +142,42 @@
       <option name="project" value="LOCAL" />
       <updated>1679817679220</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Initial Commit">
+      <created>1679820493985</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679820493985</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Initial Commit">
+      <created>1679820535033</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679820535033</updated>
+    </task>
+    <task id="LOCAL-00010" summary="upgrade sql_lite to postgresql">
+      <created>1682441444557</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682441444557</updated>
+    </task>
+    <task id="LOCAL-00011" summary="upgrade sql_lite to postgresql">
+      <created>1682443225825</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1682443225825</updated>
+    </task>
+    <task id="LOCAL-00012" summary="upgrade sql_lite to postgresql and set contact.html">
+      <created>1682567560715</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1682567560715</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,8 +196,10 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Initial Commit" />
     <MESSAGE value="icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="icon" />
+    <MESSAGE value="Initial Commit" />
+    <MESSAGE value="upgrade sql_lite to postgresql" />
+    <MESSAGE value="upgrade sql_lite to postgresql and set contact.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="upgrade sql_lite to postgresql and set contact.html" />
   </component>
 </project>
