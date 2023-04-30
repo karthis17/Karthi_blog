@@ -189,12 +189,6 @@ def contact():
     return render_template("contact.html", logged_in=current_user.is_authenticated)
 
 
-# @app.route("/sendmail", methods=['POST'])
-# @login_required
-# def sendmail():
-#     request.form.get("name")
-
-
 @app.route("/new-post", methods=["POST", "GET"])
 @login_required
 @admin_only

@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2e9e2327-24bb-4f40-9b41-1fae50b27b9f" name="Changes" comment="upgrade sql_lite to postgresql and set contact.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,16 +38,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TODO_SCOPE": "All Places",
-    "full.screen.before.presentation.mode": "false",
-    "last_opened_file_path": "D:/PYthon/flask_app/blog-with-user/main.py",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/PYthon/flask_app/blog-with-user/main.py&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\PYthon\flask_app\blog-with-user\static\img" />
@@ -62,10 +63,10 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DATABASE_URL" value="postgresql://admin:htmH2VfF2UD7fEdDpItyv5tmRougniRQ@dpg-ch40h7seooglumagtc4g-a.oregon-postgres.render.com/blog_ftc6" />
         <env name="EMAIL_ID" value="recoverid166@gmail.com" />
         <env name="PASSWORD" value="flecfrqopettfcjl" />
-        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="SECRET_KEY" value="htmH2VfF2UD7fEdDpItyv5tmRougniRQ" />
       </envs>
       <option name="SDK_HOME" value="D:\PYthon\flask_app\blog-with-user\venv\Scripts\python.exe" />
@@ -185,7 +186,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
